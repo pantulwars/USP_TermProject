@@ -34,13 +34,11 @@ This project aims to categorize Android apps from the Google Play Store into two
 ## Installation
 
 	1.	Clone the repository or download the files:
-
-git clone https://github.com/pantulwars/USP_TermProject
-cd yourproject
+		git clone https://github.com/pantulwars/USP_TermProject
+		cd yourproject
 
 	2.	Install the required dependencies:
-
-npm install
+		npm install
 
 This will install the following packages:
 	•	csv-parser
