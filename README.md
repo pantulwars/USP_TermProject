@@ -20,16 +20,16 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## Features
 
-	•	Extracts app IDs and names from a CSV file.
-	•	Fetches app details and data safety labels using the Google Play Store API.
-	•	Determines the developer’s country by analyzing the developer’s address.
-	•	Categorizes apps into Indian and US apps based on the developer’s country.
-	•	Stores the categorized data in JSON files.
+-	Extracts app IDs and names from a CSV file.
+-	Fetches app details and data safety labels using the Google Play Store API.
+-	Determines the developer’s country by analyzing the developer’s address.
+-	Categorizes apps into Indian and US apps based on the developer’s country.
+-	Stores the categorized data in JSON files.
 
 ## Prerequisites
 
-	•	Node.js (version 14 or higher)
-	•	npm (Node Package Manager)
+-	Node.js (version 14 or higher)
+-	npm (Node Package Manager)
 
 ## Installation
 
@@ -60,17 +60,17 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## File Descriptions
 
-	•	filterCsv.js: Script to filter out unnecessary columns from Google-Playstore 2.csv, keeping only “App Name” and “App Id”, and save the result as Filtered-Google-Playstore.csv.
-	•	Filtered-Google-Playstore.csv: The filtered CSV file containing only the “App Name” and “App Id” columns.
-	•	Google-Playstore 2.csv: Original CSV file containing app data with multiple columns.
-	•	India_pincode.csv: CSV file containing Indian cities, areas, pincodes, districts, and states.
-	•	list_of_real_usa_addresses.csv: CSV file containing US addresses, cities, states, and zip codes.
-	•	processIndiaPincodes.js: Script to process India_pincode.csv and generate lists of unique Indian states, cities, and pincodes.
-	•	processUSZips.js: Script to process list_of_real_usa_addresses.csv and generate lists of unique US states, cities, and zip codes.
-	•	usp.js: Main script that reads app IDs from Filtered-Google-Playstore.csv, fetches app data, determines the developer’s country, and categorizes apps into Indian and US apps.
-	•	indian_apps.json: JSON file containing data of Indian apps.
-	•	us_apps.json: JSON file containing data of US apps.
-	•	README.md: Documentation file for the project.
+-	filterCsv.js: Script to filter out unnecessary columns from Google-Playstore 2.csv, keeping only “App Name” and “App Id”, and save the result as Filtered-Google-Playstore.csv.
+-	Filtered-Google-Playstore.csv: The filtered CSV file containing only the “App Name” and “App Id” columns.
+-	Google-Playstore 2.csv: Original CSV file containing app data with multiple columns.
+-	India_pincode.csv: CSV file containing Indian cities, areas, pincodes, districts, and states.
+-	list_of_real_usa_addresses.csv: CSV file containing US addresses, cities, states, and zip codes.
+-	processIndiaPincodes.js: Script to process India_pincode.csv and generate lists of unique Indian states, cities, and pincodes.
+-	processUSZips.js: Script to process list_of_real_usa_addresses.csv and generate lists of unique US states, cities, and zip codes.
+-	usp.js: Main script that reads app IDs from Filtered-Google-Playstore.csv, fetches app data, determines the developer’s country, and categorizes apps into Indian and US apps.
+-	indian_apps.json: JSON file containing data of Indian apps.
+-	us_apps.json: JSON file containing data of US apps.
+-	README.md: Documentation file for the project.
 
 ## Usage
 
@@ -106,11 +106,11 @@ Run the main script to fetch app data, determine the developer’s country, and 
 
 This script will:
 
-	•	Read app IDs and names from ./Dataset/Filtered-Google-Playstore.csv.
-	•	Fetch app details and data safety labels from the Google Play Store.
-	•	Determine the developer’s country by analyzing the developer’s address.
-	•	Categorize apps into Indian and US apps.
-	•	Write the categorized data to ./apps/indian_apps.json and ./apps/us_apps.json.
+-	Read app IDs and names from ./Dataset/Filtered-Google-Playstore.csv.
+-	Fetch app details and data safety labels from the Google Play Store.
+-	Determine the developer’s country by analyzing the developer’s address.
+-	Categorize apps into Indian and US apps.
+-	Write the categorized data to ./apps/indian_apps.json and ./apps/us_apps.json.
 
 The script will process up to MAX_APPS_PER_COUNTRY (1,000 or anything that is set in usp.js) apps per country by default.
 
@@ -126,11 +126,11 @@ To change the limit, edit usp.js and modify the value of MAX_APPS_PER_COUNTRY:
 
 ## Notes
 
-	•	Data Sources:
-	•	Ensure that India_pincode.csv and list_of_real_usa_addresses.csv contain accurate and up-to-date data.
-	•	The app data is fetched from the Google Play Store using the google-play-scraper package.
-	•	Error Handling:
-	•	The scripts include basic error handling. Errors encountered during data fetching will be logged, and the script will continue processing the next app.
+-	Data Sources:
+-	Ensure that India_pincode.csv and list_of_real_usa_addresses.csv contain accurate and up-to-date data.
+-	The app data is fetched from the Google Play Store using the google-play-scraper package.
+-	Error Handling:
+-	The scripts include basic error handling. Errors encountered during data fetching will be logged, and the script will continue processing the next app.
 	
 ## Contributing
 
