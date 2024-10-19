@@ -4,19 +4,19 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## Table of Contents
 
-	•	Project Overview
-	•	Features
-	•	Prerequisites
-	•	Installation
-	•	File Descriptions
-	•	Usage
-	•	1. Filter the CSV File
-	•	2. Process Indian Pincodes
-	•	3. Process US Zip Codes
-	•	4. Fetch App Data and Categorize Apps
-	•	Configuration
-	•	Notes
-	•	Contributing
+-	Project Overview
+-	Features
+-	Prerequisites
+-	Installation
+-	File Descriptions
+-	Usage
+-	1. Filter the CSV File
+-	2. Process Indian Pincodes
+-	3. Process US Zip Codes
+-	4. Fetch App Data and Categorize Apps
+-	Configuration
+-	Notes
+-	Contributing
 
 ## Features
 
