@@ -33,11 +33,11 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## Installation
 
-	1.	Clone the repository or download the files:
+1.	Clone the repository or download the files:
 		git clone https://github.com/pantulwars/USP_TermProject
 		cd yourproject
 
-	2.	Install the required dependencies:
+2.	Install the required dependencies:
 		npm install
 
 This will install the following packages:
@@ -46,8 +46,8 @@ This will install the following packages:
 	•	google-play-scraper
         refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
 
-	3.	Create a directory by name "Dataset" inside the project directory and ensure the following CSV files are present in it:
-	•	Google-Playstore 2.csv
+3.	Create a directory by name "Dataset" inside the project directory and ensure the following CSV files are present in it:
+		Google-Playstore 2.csv
         download this dataset from: https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/data
 	•	India_pincode.csv
         download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
@@ -134,9 +134,9 @@ const MAX_APPS_PER_COUNTRY = 500; // Example: Limit to 500 apps per country
 
 Contribute to this project, please follow these steps:
 
-	1.	Fork the repository.
-	2.	Create a new branch for your feature or bugfix.
-	3.	Commit your changes with clear messages.
-	4.	Push your branch to your forked repository.
-	5.	Open a pull request to the main repository.
+1.	Fork the repository.
+2.	Create a new branch for your feature or bugfix.
+3.	Commit your changes with clear messages.
+4.	Push your branch to your forked repository.
+5.	Open a pull request to the main repository.
 
