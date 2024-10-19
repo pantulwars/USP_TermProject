@@ -47,10 +47,11 @@ This project aims to categorize Android apps from the Google Play Store into two
 	•	csv-parser
 	•	csv-writer
 	•	google-play-scraper
-    	• refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
+    >	refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
 
 3.	Create a directory by name "Dataset" inside the project directory and ensure the following CSV files are present in it:
-		Google-Playstore 2.csv
+	
+	•	Google-Playstore 2.csv
         download this dataset from: https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/data
 	•	India_pincode.csv
 		download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
@@ -113,9 +114,7 @@ This script will:
 
 The script will process up to MAX_APPS_PER_COUNTRY (1,000 or anything that is set in usp.js) apps per country by default.
 
-## Configuration
-
-## Adjusting the Maximum Number of Apps
+## Configuration: Adjusting the Maximum Number of Apps
 
 The maximum number of apps per country is defined as a constant in usp.js:
 
