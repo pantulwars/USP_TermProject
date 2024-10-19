@@ -39,13 +39,15 @@ This project aims to categorize Android apps from the Google Play Store into two
 		cd yourproject
 
 2.	Install the required dependencies:
+		
 		npm install
 
 This will install the following packages:
+	
 	•	csv-parser
 	•	csv-writer
 	•	google-play-scraper
-        refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
+    	• refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
 
 3.	Create a directory by name "Dataset" inside the project directory and ensure the following CSV files are present in it:
 		Google-Playstore 2.csv
