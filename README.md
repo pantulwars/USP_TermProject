@@ -28,14 +28,15 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## Prerequisites
 
-	>	Node.js (version 14 or higher)
-	>	npm (Node Package Manager)
+	•	Node.js (version 14 or higher)
+	•	npm (Node Package Manager)
 
 ## Installation
 
 1.	Clone the repository or download the files:
-	> git clone https://github.com/pantulwars/USP_TermProject
-	> cd yourproject
+	
+		git clone https://github.com/pantulwars/USP_TermProject
+		cd yourproject
 
 2.	Install the required dependencies:
 		npm install
