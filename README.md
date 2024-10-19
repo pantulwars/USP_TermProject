@@ -1,5 +1,3 @@
-### README
-
 ## Project Overview
 
 This project aims to categorize Android apps from the Google Play Store into two groups: Indian apps and US apps. It fetches app details and data safety labels, determines the developer’s country based on the developer’s address, and collects data until it reaches MAX_APPS_PER_COUNTRY (1,000 or anything that is set in usp.js) apps for each country or the dataset list ends. The data is then stored in JSON files for further analysis.
