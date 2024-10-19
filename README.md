@@ -1,10 +1,10 @@
-README
+### README
 
-Project Overview
+## Project Overview
 
 This project aims to categorize Android apps from the Google Play Store into two groups: Indian apps and US apps. It fetches app details and data safety labels, determines the developer’s country based on the developer’s address, and collects data until it reaches MAX_APPS_PER_COUNTRY (1,000 or anything that is set in usp.js) apps for each country or the dataset list ends. The data is then stored in JSON files for further analysis.
 
-Table of Contents
+## Table of Contents
 
 	•	Project Overview
 	•	Features
@@ -20,7 +20,7 @@ Table of Contents
 	•	Notes
 	•	Contributing
 
-Features
+## Features
 
 	•	Extracts app IDs and names from a CSV file.
 	•	Fetches app details and data safety labels using the Google Play Store API.
@@ -28,12 +28,12 @@ Features
 	•	Categorizes apps into Indian and US apps based on the developer’s country.
 	•	Stores the categorized data in JSON files.
 
-Prerequisites
+## Prerequisites
 
 	•	Node.js (version 14 or higher)
 	•	npm (Node Package Manager)
 
-Installation
+## Installation
 
 	1.	Clone the repository or download the files:
 
@@ -58,7 +58,7 @@ This will install the following packages:
 	•	list_of_real_usa_addresses.csv
         download this dataset from: https://www.kaggle.com/datasets/ahmedshahriarsakib/list-of-real-usa-addresses
 
-File Descriptions
+## File Descriptions
 
 	•	filterCsv.js: Script to filter out unnecessary columns from Google-Playstore 2.csv, keeping only “App Name” and “App Id”, and save the result as Filtered-Google-Playstore.csv.
 	•	Filtered-Google-Playstore.csv: The filtered CSV file containing only the “App Name” and “App Id” columns.
@@ -72,7 +72,7 @@ File Descriptions
 	•	us_apps.json: JSON file containing data of US apps.
 	•	README.md: Documentation file for the project.
 
-Usage
+## Usage
 
 1. Filter the CSV File
 
@@ -114,7 +114,7 @@ This script will:
 
 The script will process up to MAX_APPS_PER_COUNTRY (1,000 or anything that is set in usp.js) apps per country by default.
 
-Configuration
+## Configuration
 
 Adjusting the Maximum Number of Apps
 
@@ -126,7 +126,7 @@ To change the limit, edit usp.js and modify the value of MAX_APPS_PER_COUNTRY:
 
 const MAX_APPS_PER_COUNTRY = 500; // Example: Limit to 500 apps per country
 
-Notes
+## Notes
 
 	•	Data Sources:
 	•	Ensure that India_pincode.csv and list_of_real_usa_addresses.csv contain accurate and up-to-date data.
@@ -134,7 +134,7 @@ Notes
 	•	Error Handling:
 	•	The scripts include basic error handling. Errors encountered during data fetching will be logged, and the script will continue processing the next app.
 	
-Contributing
+## Contributing
 
 Contribute to this project, please follow these steps:
 
