@@ -77,7 +77,7 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 First, you need to filter the original CSV file to keep only the necessary columns.
 
-node filterCsv.js
+	node filterCsv.js
 
 This will read ./Dataset/Google-Playstore 2.csv and create ./Dataset/Filtered-Google-Playstore.csv with only “App Name” and “App Id” columns.
 
@@ -85,7 +85,7 @@ This will read ./Dataset/Google-Playstore 2.csv and create ./Dataset/Filtered-Go
 
 Process the Indian pincodes to generate lists of states, cities, and pincodes.
 
-node processIndiaPincodes.js
+	node processIndiaPincodes.js
 
 This script reads India_pincode.csv and generates internal lists used by usp.js. It does not produce an output file but is essential for the main script.
 
@@ -93,7 +93,7 @@ This script reads India_pincode.csv and generates internal lists used by usp.js.
 
 Process the US zip codes to generate lists of states, cities, and zip codes.
 
-node processUSZips.js
+	node processUSZips.js
 
 This script reads list_of_real_usa_addresses.csv and generates internal lists used by usp.js. It does not produce an output file but is essential for the main script.
 
@@ -101,7 +101,7 @@ This script reads list_of_real_usa_addresses.csv and generates internal lists us
 
 Run the main script to fetch app data, determine the developer’s country, and categorize apps.
 
-node usp.js
+	node usp.js
 
 This script will:
 
@@ -115,7 +115,7 @@ The script will process up to MAX_APPS_PER_COUNTRY (1,000 or anything that is se
 
 ## Configuration
 
-# Adjusting the Maximum Number of Apps
+## Adjusting the Maximum Number of Apps
 
 The maximum number of apps per country is defined as a constant in usp.js:
 
