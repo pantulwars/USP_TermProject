@@ -44,19 +44,19 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 	This will install the following packages:
 	
-	•	csv-parser
-	•	csv-writer
-	•	google-play-scraper
+	-	csv-parser
+	-	csv-writer
+	-	google-play-scraper
     >	refer this github repo for this library: https://github.com/facundoolano/google-play-scraper
 
 3.	Create a directory by name "Dataset" inside the project directory and ensure the following CSV files are present in it:
 	
 	•	Google-Playstore 2.csv
-        download this dataset from: https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/data
+    >	download this dataset from: https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/data
 	•	India_pincode.csv
-		download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
+	>	download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
 	•	list_of_real_usa_addresses.csv
-        download this dataset from: https://www.kaggle.com/datasets/ahmedshahriarsakib/list-of-real-usa-addresses
+    >	download this dataset from: https://www.kaggle.com/datasets/ahmedshahriarsakib/list-of-real-usa-addresses
 
 ## File Descriptions
 
