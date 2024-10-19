@@ -28,8 +28,8 @@ This project aims to categorize Android apps from the Google Play Store into two
 
 ## Prerequisites
 
-	•	Node.js (version 14 or higher)
-	•	npm (Node Package Manager)
+	>	Node.js (version 14 or higher)
+	>	npm (Node Package Manager)
 
 ## Installation
 
