@@ -42,7 +42,7 @@ This project aims to categorize Android apps from the Google Play Store into two
 		
 		npm install
 
-This will install the following packages:
+	This will install the following packages:
 	
 	•	csv-parser
 	•	csv-writer
@@ -53,7 +53,7 @@ This will install the following packages:
 		Google-Playstore 2.csv
         download this dataset from: https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps/data
 	•	India_pincode.csv
-        download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
+		download this dataset from: https://www.kaggle.com/datasets/kdsharmaai/india-pinzip-code-city-area-district-state
 	•	list_of_real_usa_addresses.csv
         download this dataset from: https://www.kaggle.com/datasets/ahmedshahriarsakib/list-of-real-usa-addresses
 
@@ -115,15 +115,15 @@ The script will process up to MAX_APPS_PER_COUNTRY (1,000 or anything that is se
 
 ## Configuration
 
-Adjusting the Maximum Number of Apps
+# Adjusting the Maximum Number of Apps
 
 The maximum number of apps per country is defined as a constant in usp.js:
 
-const MAX_APPS_PER_COUNTRY = 1000;
+	const MAX_APPS_PER_COUNTRY = 1000;
 
 To change the limit, edit usp.js and modify the value of MAX_APPS_PER_COUNTRY:
 
-const MAX_APPS_PER_COUNTRY = 500; // Example: Limit to 500 apps per country
+	const MAX_APPS_PER_COUNTRY = 500; // Example: Limit to 500 apps per country
 
 ## Notes
 
