@@ -3,7 +3,7 @@ const csv = require('csv-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 
-const inputFilePath = './Dataset/Google-Playstore 2.csv'; 
+const inputFilePath = './Dataset/Google-Playstore.csv'; 
 const outputFilePath = './Dataset/Filtered-Google-Playstore.csv';
 
 const desiredColumns = ['App Name', 'App Id']; 

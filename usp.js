@@ -6,7 +6,7 @@ import { processIndiaPincodes } from './processIndiaPincodes.js';
 import { processUSZips } from './processUSZips.js';
 
 // Constant for maximum apps per country
-const MAX_APPS_PER_COUNTRY = 10;
+const MAX_APPS_PER_COUNTRY = 1000;
 
 async function fetchAppData(appId, appName, indianData, usData) {
     try {
@@ -125,6 +125,12 @@ async function main() {
     const indianData = await processIndiaPincodes();
     const usData = await processUSZips();
 
+    // Create the directory if it doesn't exist
+    const directoryPath = path.join(process.cwd(), 'apps');
+    if (!fs.existsSync(directoryPath)) {
+        fs.mkdirSync(directoryPath);
+    }
+
     await new Promise((resolve, reject) => {
         fs.createReadStream('./Dataset/Filtered-Google-Playstore.csv')
             .pipe(csv())
@@ -147,22 +153,25 @@ async function main() {
             if (developerCountry === 'India' && indianCount < MAX_APPS_PER_COUNTRY) {
                 indianApps.push(appData);
                 indianCount++;
+
+                // Write the app data at the end of the file
+                appendJsonToFile(path.join(directoryPath, 'indian_apps.json'), appData);
+
             } else if (developerCountry === 'United States' && usCount < MAX_APPS_PER_COUNTRY) {
                 usApps.push(appData);
                 usCount++;
+
+                // Write the app data at the end of the file
+                appendJsonToFile(path.join(directoryPath, 'us_apps.json'), appData);
             }
         }
     }
 
-    // Create the directory if it doesn't exist
-    const directoryPath = path.join(process.cwd(), 'apps');
-    if (!fs.existsSync(directoryPath)) {
-        fs.mkdirSync(directoryPath);
-    }
+    
 
     // Write the JSON files in the 'apps' directory
-    fs.writeFileSync(path.join(directoryPath, 'indian_apps.json'), JSON.stringify(indianApps, null, 2));
-    fs.writeFileSync(path.join(directoryPath, 'us_apps.json'), JSON.stringify(usApps, null, 2));
+    fs.writeFileSync(path.join(directoryPath, 'indian_apps_list.json'), JSON.stringify(indianApps, null, 2));
+    fs.writeFileSync(path.join(directoryPath, 'us_apps_list.json'), JSON.stringify(usApps, null, 2));
 
     console.log(`Processed ${indianCount} Indian apps and ${usCount} US apps to the apps directory.`);
 }
