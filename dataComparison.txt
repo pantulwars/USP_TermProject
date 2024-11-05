@@ -1,0 +1,58 @@
+App Counts
+----------
+US Apps: 1557
+Indian Apps: 147
+
+Data Type Counts Comparison
+-------------------------|----------------|------------------
+Type                     | US Percentage  | Indian Percentage
+-------------------------|----------------|------------------
+Photos and videos         |          42.45% |            27.89%
+Financial info            |          38.09% |            20.41%
+Device or other IDs       |          64.10% |            48.98%
+App info and performance  |         141.04% |           116.33%
+App activity              |         129.09% |            82.31%
+Personal info             |         209.44% |           129.25%
+Audio                     |          14.32% |             8.16%
+Web browsing              |           2.18% |             0.68%
+Contacts                  |           6.62% |             6.12%
+Health and fitness        |           7.26% |             1.36%
+Calendar                  |           2.06% |             0.00%
+Location                  |          54.21% |            27.21%
+Messages                  |          22.35% |            22.45%
+Files and docs            |           8.22% |             4.08%
+
+
+Purpose Counts Comparison
+-------------------------|----------------|------------------
+Type                     | US Percentage  | Indian Percentage
+-------------------------|----------------|------------------
+App functionality         |         484.91% |           297.28%
+Fraud prevention          |         177.97% |           119.05%
+security                  |         177.97% |           119.05%
+and compliance            |         177.97% |           119.05%
+Analytics                 |         430.12% |           324.49%
+Personalization           |         173.99% |            81.63%
+Account management        |         195.76% |           144.90%
+Developer communications  |         103.53% |            65.31%
+Advertising or marketing  |         173.60% |           117.01%
+
+
+Optionality Comparison
+-------------------------|----------------|------------------
+Type                     | US Percentage  | Indian Percentage
+-------------------------|----------------|------------------
+Optional                |          35.91% |            36.68%
+Required                |          64.09% |            63.32%
+
+
+Security Practices Comparison
+-------------------------|----------------|------------------
+Practice                 | US Percentage  | Indian Percentage
+-------------------------|----------------|------------------
+Data is encrypted in transit |          84.20% |            76.19%
+You can request that data be deleted |          66.09% |            43.54%
+Independent security review |           0.45% |             0.68%
+Data isn’t encrypted      |          11.24% |            15.65%
+Data can’t be deleted     |          24.98% |            42.18%
+Committed to follow the Play Families Policy |           2.57% |             2.04%
