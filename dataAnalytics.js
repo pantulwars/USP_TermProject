@@ -117,7 +117,86 @@ const performTTest = (usCounts, indianCounts) => {
     confidenceInterval: confidenceInterval.map((v) => v.toFixed(2)),
   };
 };
+const performChiSquareTest = (usCounts, indianCounts) => {
+  const usValues = Object.values(usCounts);
+  const indianValues = Object.values(indianCounts);
 
+  // Calculate means for comparison
+  const usMean = usValues.reduce((a, b) => a + b, 0) / usValues.length;
+  const indianMean =
+    indianValues.reduce((a, b) => a + b, 0) / indianValues.length;
+
+  // Calculate row and column totals
+  const usTotal = usValues.reduce((a, b) => a + b, 0);
+  const indianTotal = indianValues.reduce((a, b) => a + b, 0);
+  const grandTotal = usTotal + indianTotal;
+
+  // Calculate chi-square statistic
+  let chiSquare = 0;
+  const categories = Math.max(usValues.length, indianValues.length);
+
+  for (let i = 0; i < categories; i++) {
+    const observed1 = usValues[i] || 0;
+    const observed2 = indianValues[i] || 0;
+
+    // Calculate expected frequencies
+    const expected1 = (usTotal * (observed1 + observed2)) / grandTotal;
+    const expected2 = (indianTotal * (observed1 + observed2)) / grandTotal;
+
+    // Add to chi-square statistic if expected frequency is not zero
+    if (expected1 > 0) {
+      chiSquare += Math.pow(observed1 - expected1, 2) / expected1;
+    }
+    if (expected2 > 0) {
+      chiSquare += Math.pow(observed2 - expected2, 2) / expected2;
+    }
+  }
+
+  // Calculate degrees of freedom
+  const df = categories - 1;
+
+  // Calculate p-value using chi-square distribution approximation
+  const pValue = 1 - chiSquareCDF(chiSquare, df);
+
+  // Determine which group collects more data
+  const collectionComparison =
+    usMean > indianMean
+      ? "US apps collect more data"
+      : "Indian apps collect more data";
+
+  return {
+    chiSquare: chiSquare.toFixed(4),
+    pValue: pValue.toFixed(4),
+    isSignificant: pValue < 0.05,
+    comparison: collectionComparison,
+    usMean: usMean.toFixed(2),
+    indianMean: indianMean.toFixed(2),
+  };
+};
+
+// Chi-square CDF approximation
+const chiSquareCDF = (x, df) => {
+  const gamma = (n) => {
+    if (n === 1) return 1;
+    if (n === 0.5) return Math.sqrt(Math.PI);
+    return (n - 1) * gamma(n - 1);
+  };
+
+  const lowerGamma = (s, x) => {
+    const steps = 1000;
+    const h = x / steps;
+    let sum = 0;
+
+    for (let i = 0; i < steps; i++) {
+      const t = i * h;
+      sum += h * Math.pow(t, s - 1) * Math.exp(-t);
+    }
+
+    return sum;
+  };
+
+  return lowerGamma(df / 2, x / 2) / gamma(df / 2);
+};
 // Create a table comparing US and Indian data type counts
 const createComparisonTable = (usCounts, indianCounts, title) => {
   const allTypes = new Set([
@@ -135,17 +214,15 @@ const createComparisonTable = (usCounts, indianCounts, title) => {
       .toString()
       .padStart(14)} | ${indianCount.toString().padStart(16)}\n`;
   });
-  const { tTestResult, confidenceInterval } = performTTest(
-    usCounts,
-    indianCounts
-  );
-  table += `\nT-Test Result: ${tTestResult}\n`;
-  table += `95% Confidence Interval: [${confidenceInterval[0]}, ${confidenceInterval[1]}]\n`;
-  table += `Inference: ${
-    tTestResult < 0.05
-      ? "Statistically significant"
-      : "Not statistically significant"
+  const { chiSquare, pValue, isSignificant, comparison, usMean, indianMean } =
+    performChiSquareTest(usCounts, indianCounts);
+  table += `\nChi-Square Statistic: ${chiSquare}\n`;
+  table += `P-Value: ${pValue}\n`;
+  table += `Statistical Significance: ${
+    isSignificant ? "Significant" : "Not significant"
   } at 95% confidence level\n`;
+  table += `Mean Comparison: US (${usMean}) vs India (${indianMean})\n`;
+  table += `Result: ${comparison}\n`;
   return table;
 };
 
@@ -161,17 +238,15 @@ const createOptionalityTable = (usOptionality, indianOptionality) => {
   table += `Required                | ${usOptionality.required
     .toString()
     .padStart(14)} | ${indianOptionality.required.toString().padStart(16)}\n`;
-  const { tTestResult, confidenceInterval } = performTTest(
-    usOptionality,
-    indianOptionality
-  );
-  table += `\nT-Test Result: ${tTestResult}\n`;
-  table += `95% Confidence Interval: [${confidenceInterval[0]}, ${confidenceInterval[1]}]\n`;
-  table += `Inference: ${
-    tTestResult < 0.05
-      ? "Statistically significant"
-      : "Not statistically significant"
+  const { chiSquare, pValue, isSignificant, comparison, usMean, indianMean } =
+    performChiSquareTest(usOptionality, indianOptionality);
+  table += `\nChi-Square Statistic: ${chiSquare}\n`;
+  table += `P-Value: ${pValue}\n`;
+  table += `Statistical Significance: ${
+    isSignificant ? "Significant" : "Not significant"
   } at 95% confidence level\n`;
+  table += `Mean Comparison: US (${usMean}) vs India (${indianMean})\n`;
+  table += `Result: ${comparison}\n`;
   return table;
 };
 
@@ -192,17 +267,15 @@ const createSecurityPracticesTable = (usCounts, indianCounts, title) => {
       .toString()
       .padStart(14)} | ${indianCount.toString().padStart(16)}\n`;
   });
-  const { tTestResult, confidenceInterval } = performTTest(
-    usCounts,
-    indianCounts
-  );
-  table += `\nT-Test Result: ${tTestResult}\n`;
-  table += `95% Confidence Interval: [${confidenceInterval[0]}, ${confidenceInterval[1]}]\n`;
-  table += `Inference: ${
-    tTestResult < 0.05
-      ? "Statistically significant"
-      : "Not statistically significant"
+  const { chiSquare, pValue, isSignificant, comparison, usMean, indianMean } =
+    performChiSquareTest(usCounts, indianCounts);
+  table += `\nChi-Square Statistic: ${chiSquare}\n`;
+  table += `P-Value: ${pValue}\n`;
+  table += `Statistical Significance: ${
+    isSignificant ? "Significant" : "Not significant"
   } at 95% confidence level\n`;
+  table += `Mean Comparison: US (${usMean}) vs India (${indianMean})\n`;
+  table += `Result: ${comparison}\n`;
   return table;
 };
 

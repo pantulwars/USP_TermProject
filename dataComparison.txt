@@ -7,115 +7,124 @@ Data Type Counts Comparison
 -------------------------|----------------|------------------
 Type                     | US Count       | Indian Count
 -------------------------|----------------|------------------
-App info and performance  |            125 |              118
-Device or other IDs       |             58 |               47
-Messages                  |             20 |               21
-Financial info            |             27 |               20
-Location                  |             59 |               30
-Personal info             |            189 |              124
-App activity              |             93 |               82
-Audio                     |             17 |                7
-Photos and videos         |             38 |               24
-Contacts                  |              6 |                5
-Files and docs            |              5 |                4
-Web browsing              |              2 |                1
-Health and fitness        |              6 |                2
-Calendar                  |              1 |                0
+Device or other IDs       |             65 |               46
+App activity              |            130 |               76
+Messages                  |             21 |               23
+Location                  |             64 |               29
+Photos and videos         |             41 |               27
+App info and performance  |            160 |              106
+Personal info             |            194 |              130
+Financial info            |             27 |               18
+Audio                     |             19 |                7
+Files and docs            |              9 |                4
+Web browsing              |              3 |                0
+Health and fitness        |             11 |                1
+Calendar                  |              3 |                0
+Contacts                  |              5 |                7
 
-T-Test Result: 0.45860313977623096
-95% Confidence Interval: [-28.58, 46.25]
-Inference: Not statistically significant at 95% confidence level
+Chi-Square Statistic: 268.0273
+P-Value: 0.0000
+Statistical Significance: Significant at 95% confidence level
+Mean Comparison: US (53.71) vs India (39.50)
+Result: US apps collect more data
 
 
 Purpose Counts Comparison
 -------------------------|----------------|------------------
 Type                     | US Count       | Indian Count
 -------------------------|----------------|------------------
-Analytics                 |            365 |              330
-Advertising or marketing  |            148 |              115
-Fraud prevention          |            114 |              130
-security                  |            114 |              130
-and compliance            |            114 |              130
-App functionality         |            400 |              293
-Personalization           |            171 |               90
-Developer communications  |            112 |               66
-Account management        |            160 |              148
+App functionality         |            450 |              283
+Analytics                 |            485 |              306
+Personalization           |            178 |               73
+Developer communications  |            106 |               55
+Account management        |            189 |              139
+Advertising or marketing  |            198 |              112
+Fraud prevention          |            166 |              108
+security                  |            166 |              108
+and compliance            |            166 |              108
 
-T-Test Result: 0.6149167316262415
-95% Confidence Interval: [-64.65, 123.76]
-Inference: Not statistically significant at 95% confidence level
+Chi-Square Statistic: 233.9844
+P-Value: -0.0000
+Statistical Significance: Significant at 95% confidence level
+Mean Comparison: US (233.78) vs India (143.56)
+Result: US apps collect more data
 
 
 Optionality Comparison
 -------------------------|----------------|------------------
 Type                     | US Count       | Indian Count
 -------------------------|----------------|------------------
-Optional                |            218 |              171
-Required                |            428 |              314
+Optional                |            284 |              177
+Required                |            468 |              297
 
-T-Test Result: 0.6336962203032619
-95% Confidence Interval: [-168.48, 329.48]
-Inference: Not statistically significant at 95% confidence level
+Chi-Square Statistic: 72.2570
+P-Value: -Infinity
+Statistical Significance: Significant at 95% confidence level
+Mean Comparison: US (376.00) vs India (237.00)
+Result: US apps collect more data
 
 
 Security Practices Comparison
 -------------------------|----------------|------------------
 Practice                 | US Count       | Indian Count
 -------------------------|----------------|------------------
-Data is encrypted in transit |             86 |               77
-Data can’t be deleted     |             32 |               43
-Data isn’t encrypted      |              9 |               14
-You can request that data be deleted |             60 |               41
-Committed to follow the Play Families Policy |              3 |                1
-Independent security review |              1 |                1
+Data is encrypted in transit |             78 |               78
+You can request that data be deleted |             65 |               47
+Data can’t be deleted     |             29 |               40
+Data isn’t encrypted      |             17 |               16
+Committed to follow the Play Families Policy |              6 |                3
 
-T-Test Result: 0.12492234601861305
-95% Confidence Interval: [-34.28, 38.94]
-Inference: Not statistically significant at 95% confidence level
+Chi-Square Statistic: 10.9358
+P-Value: 0.0274
+Statistical Significance: Significant at 95% confidence level
+Mean Comparison: US (39.00) vs India (36.80)
+Result: US apps collect more data
 
 
 Data Counts Comparison
 -------------------------|----------------|------------------
 Type                     | US Count       | Indian Count
 -------------------------|----------------|------------------
-Crash logs                |             55 |               48
-Other app performance data |             25 |               31
-Diagnostics               |             45 |               39
-Device or other IDs       |             58 |               47
-Other in-app messages     |             14 |               11
-Purchase history          |             20 |               14
-Approximate location      |             36 |               15
-User IDs                  |             40 |               21
-App interactions          |             47 |               33
-Other actions             |             14 |               12
-In-app search history     |             10 |               17
-Other user-generated content |             18 |               14
-Voice or sound recordings |              9 |                4
-Photos                    |             25 |               18
-Contacts                  |              6 |                5
-Email address             |             49 |               33
-Phone number              |             22 |               18
-Precise location          |             23 |               15
-Videos                    |             13 |                6
-Name                      |             37 |               30
-Address                   |              8 |                6
-Race and ethnicity        |              5 |                1
-Political or religious beliefs |              4 |                2
-Sexual orientation        |              6 |                0
-Other info                |             18 |               13
-User payment info         |              6 |                6
-Files and docs            |              5 |                4
+Device or other IDs       |             65 |               46
+App interactions          |             59 |               36
+Other user-generated content |             22 |               11
+Other in-app messages     |             15 |               12
+Approximate location      |             40 |               16
+Precise location          |             24 |               13
+Photos                    |             28 |               20
+Crash logs                |             70 |               45
+Diagnostics               |             53 |               35
+Other app performance data |             37 |               26
+Name                      |             40 |               34
+Email address             |             50 |               35
+User IDs                  |             41 |               22
+Address                   |             10 |                6
+Phone number              |             25 |               20
+Purchase history          |             21 |               12
+Voice or sound recordings |             12 |                4
+Other actions             |             23 |               10
+Files and docs            |              9 |                4
+Videos                    |             13 |                7
+Other info                |             18 |               12
 Music files               |              4 |                2
-Other audio files         |              4 |                1
-Emails                    |              3 |                5
+In-app search history     |             19 |               17
+Web browsing history      |              3 |                0
+Race and ethnicity        |              4 |                0
+Political or religious beliefs |              1 |                1
+Sexual orientation        |              5 |                0
+Installed apps            |              7 |                2
+Fitness info              |              5 |                1
+Emails                    |              3 |                6
+Other audio files         |              3 |                1
 SMS or MMS                |              3 |                5
-Web browsing history      |              2 |                1
-Fitness info              |              4 |                2
-Installed apps            |              4 |                6
-Health info               |              2 |                0
-Calendar events           |              1 |                0
-Other financial info      |              1 |                0
+User payment info         |              4 |                6
+Calendar events           |              3 |                0
+Health info               |              6 |                0
+Contacts                  |              5 |                7
+Other financial info      |              2 |                0
 
-T-Test Result: 0.746153643194963
-95% Confidence Interval: [-4.40, 9.93]
-Inference: Not statistically significant at 95% confidence level
+Chi-Square Statistic: 145.3584
+P-Value: 0.0000
+Statistical Significance: Significant at 95% confidence level
+Mean Comparison: US (20.32) vs India (15.29)
+Result: US apps collect more data
